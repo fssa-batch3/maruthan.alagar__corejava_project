@@ -1,4 +1,4 @@
-package day01.practice;
+package com.fssa.corejava.day01.practice;
 
 public class AccessModifier {
 	private static String a = "a";
