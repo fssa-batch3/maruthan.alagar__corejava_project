@@ -1,5 +1,5 @@
 package com.fssa.corejava.day04.misc;
-class Rectangle {
+ public class Rectangle {
     protected double length;
     protected double breadth;
 

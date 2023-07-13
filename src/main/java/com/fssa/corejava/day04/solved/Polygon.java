@@ -17,10 +17,7 @@ public abstract class Polygon {
 	public abstract double circumference() ;
 
 
-	public double perimeter() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	public abstract double perimeter();
 	
 	
 	
