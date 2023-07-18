@@ -14,7 +14,7 @@ public class Rectangle extends Polygon {
 		this.breadth = breadth;
 	}
 
-	@Override
+	
 	public double calculateArea() {
 
 		return this.length * this.breadth;
@@ -24,7 +24,7 @@ public class Rectangle extends Polygon {
 		return super.numberOfSides;
 	}
 
-	@Override
+	
 	public double circumference() {
 
 		return 0;
