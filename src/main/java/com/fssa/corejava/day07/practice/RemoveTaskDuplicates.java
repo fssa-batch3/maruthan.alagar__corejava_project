@@ -15,10 +15,16 @@ class Task {
 
 	private String name;
 	private String deadline;
+	private int id;
 
-	public Task(String name, String deadline) {
+	public int getId() {
+		return id;
+	}
+
+	public Task(String name, String deadline ,int id) {
 		this.name = name;
 		this.deadline = deadline;
+		this.id = id;
 	}
 
 	public boolean equals(Object obj) {
@@ -46,11 +52,11 @@ public class RemoveTaskDuplicates {
 
 		ArrayList<Task> tasksWithDuplicates = new ArrayList<>();
 
-		Task task1 = new Task("Task1", "2023-07-19");
-		Task task2 = new Task("Task2", "2023-07-20");
-		Task task3 = new Task("Task1", "2023-07-19");
-		Task task4 = new Task("Task3", "2023-07-21");
-		Task task5 = new Task("Task2", "2023-07-20");
+		Task task1 = new Task("Task1", "2023-07-19" ,1);
+		Task task2 = new Task("Task2", "2023-07-20" ,2);
+		Task task3 = new Task("Task1", "2023-07-19" ,1);
+		Task task4 = new Task("Task3", "2023-07-21" ,3);
+		Task task5 = new Task("Task2", "2023-07-20" ,2);
 
 		tasksWithDuplicates.add(task1);
 		tasksWithDuplicates.add(task2);
@@ -62,7 +68,7 @@ public class RemoveTaskDuplicates {
 
 		System.out.println("Unique tasks:");
 		for (Task task : uniqueTasks) {
-			System.out.println("Name: " + task.getName() + ", Deadline: " + task.getDeadline());
+			System.out.println("Name: " + task.getName() + ", Deadline: " + task.getDeadline()+ ", ID: " + task.getId());
 		}
 	}
 }

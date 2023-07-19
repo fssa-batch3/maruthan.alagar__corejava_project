@@ -8,9 +8,9 @@ public class TestTreeSet {
  
         // TreeSet sorts the collections
         TreeSet<String> cityNames = new TreeSet<String>();
-        cityNames.add("Delhi");
-        cityNames.add("Chennai");
-        cityNames.add("Bangalore");
+        cityNames.add("Delhi");  //3
+        cityNames.add("Chennai");  //2
+        cityNames.add("Bangalore"); //1
  
         for (String cityName : cityNames) {
             System.out.println(cityName);

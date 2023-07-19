@@ -16,6 +16,8 @@ public class SetBulkOperationsDemo {
 		s2.add(1);
 		s2.add(2);
 		s2.add(3);
+		s2.add(7);
+		s2.add(4);
 		
 		
 		Set<Integer> union = new HashSet<Integer>(s1);

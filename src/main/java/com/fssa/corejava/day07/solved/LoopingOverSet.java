@@ -1,6 +1,5 @@
 package com.fssa.corejava.day07.solved;
 
-
 import java.util.Iterator;
 import java.util.Set;
 import java.util.HashSet;
@@ -14,13 +13,15 @@ public class LoopingOverSet {
 		cityNames.add("Chennai");
 		cityNames.add("Chennai");
 		cityNames.add("Bangalore");
-		
+
 		// Method 1: Using foreach
 		System.out.println("Using for Each:");
 		for (String cityName : cityNames) {
-			System.out.println(cityName);
+			System.out.print(cityName + " ");
+
 		}
-		
+		System.out.println();
+		System.out.println();
 		// Method 2: Using Iterator class
 		System.out.println("Using Iterator class:");
 		Iterator<String> iterator = cityNames.iterator();
