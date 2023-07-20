@@ -57,7 +57,7 @@ class Account implements Comparable<Account> {
 
 	@Override
 	public String toString() {
-		return "Account [accNo=" + accNo + ", name=" + name + ", balance=" + balance + "]";
+		return "Account [accNo = " + accNo + ", name=" + name + ", balance=" + balance + "]";
 	}
 
 }

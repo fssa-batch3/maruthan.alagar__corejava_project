@@ -5,7 +5,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
 class Task implements Comparable<Task> {
 	private int id;
 	private String name;
@@ -30,9 +29,17 @@ class Task implements Comparable<Task> {
 	}
 
 	@Override
-	public int compareTo(Task otherTask) {
-		return this.getDeadline().compareTo(otherTask.deadline);
+	public int compareTo(Task t) {
 
+		if (this.getDeadline() == t.getDeadline()) {
+			return 0;
+		} else {
+			if (this.getDeadline().isAfter(t.deadline)) {
+				return 1;
+			} else {
+				return -1;
+			}
+		}
 	}
 
 }
@@ -48,7 +55,6 @@ public class TaskSorting {
 				LocalDate.parse("2022-10-07", DateTimeFormatter.ofPattern("yyyy-MM-dd")));
 		Task modelTask4 = new Task(3, "Code", LocalDate.parse("2022-10-22", DateTimeFormatter.ofPattern("yyyy-MM-dd")));
 
-		// Sample tasks
 		tasks.add(modelTask1);
 		tasks.add(modelTask2);
 		tasks.add(modelTask3);

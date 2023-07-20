@@ -1,6 +1,7 @@
 package com.fssa.corejava.day09.practice;
 
 import java.time.LocalDate;
+
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,6 +35,23 @@ class Task1 {
 	public int getPriority() {
 		return priority;
 	}
+
+}
+
+class PriorityComparator implements Comparator<Task1> {
+	public int compare(Task1 t1, Task1 t2) {
+		int deadlineComparison = t1.getDeadline().compareTo(t2.getDeadline());
+		if (deadlineComparison != 0) {
+			return deadlineComparison;
+		} else {
+			if (t1.getPriority() == t2.getPriority())
+				return 0;
+			else if (t1.getPriority() > t2.getPriority())
+				return 1;
+			else
+				return -1;
+		}
+	}
 }
 
 public class TaskSorting2 {
@@ -55,9 +73,7 @@ public class TaskSorting2 {
 		tasks.add(modelTask3);
 		tasks.add(modelTask4);
 
-		Collections.sort(tasks, Comparator.comparing(Task1::getDeadline).thenComparing(Task1::getPriority));
-		
-		
+		Collections.sort(tasks, new PriorityComparator());
 
 		for (Task1 task : tasks) {
 			System.out
