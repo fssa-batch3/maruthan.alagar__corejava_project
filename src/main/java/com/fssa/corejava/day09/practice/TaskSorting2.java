@@ -47,9 +47,9 @@ class PriorityComparator implements Comparator<Task1> {
 			if (t1.getPriority() == t2.getPriority())
 				return 0;
 			else if (t1.getPriority() > t2.getPriority())
-				return 1;
-			else
 				return -1;
+			else
+				return 1;
 		}
 	}
 }
